@@ -28,7 +28,7 @@
 ```bash
 # 1) Клонувати репозиторій
 # git clone <repo-url>
-cd loan-schedule-api
+cd backend
 
 
 # 2) Підняти контейнер
@@ -36,8 +36,8 @@ docker compose up --build -d
 
 
 # 3) Виконати міграції всередині контейнера
-docker exec -it loan-schedule-api python manage.py migrate
+docker exec -it backend-api python manage.py migrate
 
 
 # (опційно) створити superuser
-# docker exec -it loan-schedule-api python manage.py createsuperuser
+# docker exec -it backend-api python manage.py createsuperuser
