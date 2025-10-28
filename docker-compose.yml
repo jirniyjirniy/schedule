@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    container_name: backend-api
+    ports:
+    - "8000:8000"
+    volumes:
+    - .:/app
+    environment:
+    - DJANGO_SETTINGS_MODULE=backend.settings
+    depends_on: []
+
+
+# Optional Redis (not strictly required). Uncomment to enable.
+# redis:
+# image: redis:7-alpine
+# container_name: loan-redis
+# ports:
+# - "6379:6379"
